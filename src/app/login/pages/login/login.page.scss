@@ -1,0 +1,36 @@
+ 
+ion-item{
+    --background: transparent;
+    color:black;
+    width: 100%;
+}
+ion-button{
+    --background:#26119c;
+}
+ion-grid{
+    --background: transparent;
+    height: 50%;
+}
+ion-row{ --background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-align-content > 
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+}
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 50%;
+  }

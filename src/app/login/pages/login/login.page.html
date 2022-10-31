@@ -1,0 +1,51 @@
+<ion-header >
+  <ion-toolbar class="custom-toolbar-text">
+    <ion-buttons slot="start">
+      <!-- <ion-back-button  text="" style="color: white;"  defaulthref="/tipoinicio"></ion-back-button> -->
+    </ion-buttons>
+    <h1><center>AUTOLAB</center></h1>    
+    <h5>Aqui se esta programando</h5>
+  </ion-toolbar>
+  </ion-header>  
+  <ion-content >
+    <div class="center"  >
+   
+        <div style="text-align: center; align-items: center;padding-top: 15px;">
+          <img src="../../../assets/icon/user.png" style="height: 130px;width: auto;">
+        
+        </div>
+        <form (ngSubmit)="onLogin()" style="text-align: center;width: 80%; ">                
+          <ion-row>
+            <ion-col size="12" size-lg="12" size-md="12" size-sm="12">
+              <ion-item >
+                <ion-label position="floating">Usuario:</ion-label>
+                 <ion-input type="text"></ion-input>
+                     <ion-input [(ngModel)]="todo.usuario" type="text" name="usuario" autocapitalize="characters"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="12" size-md="12" size-sm="12">
+              <ion-item>
+                <ion-label position="floating">Password :</ion-label>
+                <ion-input type="text"></ion-input> 
+                <ion-input [(ngModel)]="todo.pwd" type="password" name="pwd" ></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="12" size-md="12" size-sm="12">
+              <ion-item>
+                <ion-label position="floating">Rol</ion-label>
+                 <ion-select [(ngModel)]="todo.device" name="device" interface="action-sheet">
+                  <ion-select-option value="tt">tt</ion-select-option>
+                  <ion-select-option value="paciente">PACIENTE</ion-select-option>
+                  <ion-select-option value="medico">MÉDICO</ion-select-option>
+                  <ion-select-option value="referencia">REFERENCIA</ion-select-option>
+                  <ion-select-option value="intranet">INTRANET</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="12" size-md="12" size-sm="12" style="text-align: center; ">
+             <ion-button size="large" expand="block" (click)="onLogin()">Enviar </ion-button>
+            </ion-col>
+          </ion-row>                           
+        </form>  
+    </div>  
+  </ion-content>
